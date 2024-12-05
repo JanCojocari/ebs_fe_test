@@ -1,0 +1,117 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.cart_card {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inner_cart_card {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 20px;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.card_image {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    margin: 0 auto;
+}
+
+.card_text {
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.card_title {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.category {
+    padding: 8px 12px;
+    border-radius: 12px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.price {
+    padding: 8px 12px;
+    border-radius: 12px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2d89ef;
+}
+
+.button_block {
+    display: flex;
+    justify-content: center
+}
+
+.button_block button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #e74c3c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button_block button:hover {
+    background-color: #c0392b;
+}
+
+@media screen and (min-width: 768px) {
+    .inner_cart_card {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .card_image {
+        margin: 0;
+    }
+
+    .card_text {
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .inner_cart_card {
+        padding: 30px;
+    }
+
+    .card_title {
+        font-size: 24px;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+}

@@ -1,9 +1,22 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router"
+import Home from "./Pages/Home/Home"
+import Cart from "./Pages/Cart/Cart"
+import Header from "./Components/Header/Header"
+import CartProvider from "./Components/CartProvider/CartProvider"
 function App() {
+
   return (
     <div style={{ textAlign: 'center' }}>
-      <h1>Welcome to the Front-End Developer Test!</h1>
-      <p>We wish you the best of luck. Please make sure to read the README file for
-        instructions.</p>
+      <CartProvider>
+        <Router>
+          <Header />
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/*" element={<Home />} />
+          </Routes>
+        </Router>
+      </CartProvider>
     </div>
   )
 }
